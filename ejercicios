@@ -1,0 +1,94 @@
+Realizar programa que señale si un numero es primo o no
+ejercicio 1:
+num = int(input("ingrese numero:"))
+if num <= 1:
+    print("el numero no es primo")
+else:
+    primo = True
+
+    for i in range(2, num):
+        if num % i == 0:
+            primo = False
+
+    if primo == True:
+        print("el numero es primo")
+    else: 
+        print("el numero no es primo")
+****************************************
+
+ejercicio realizado por profesor:
+num = int(input("Ing. número :"))
+divisibles = 0
+
+for x in range(1, num + 1):
+   if num % x == 0:
+      divisibles = divisibles + 1
+
+if divisibles == 2:
+   print("Primo")
+else:
+   print("No es primo")
+
+
+*******************************
+
+def es_primo(numero):
+   divisibles = 0
+
+   for x in range(1, numero + 1):
+      if numero % x == 0:
+         divisibles = divisibles + 1
+
+   if divisibles == 2:
+      return True
+   else:
+      return False
+   
+
+print(es_primo(6))
+
+****************************
+contar_primo = 0
+n = 1
+while contar_primo < 30:
+   if es_primo(n):
+      print(f"{n} es primo")
+      contar_primo = contar_primo + 1
+
+   n = n + 1
+
+***************************
+
+def es_primo(numero):
+   divisibles = 0
+
+   for x in range(1, numero + 1):
+      if numero % x == 0:
+         divisibles = divisibles + 1
+
+   if divisibles == 2:
+      return True
+   else:
+      return False
+   
+
+def los_primeros_numeros_primos(cuantos):
+   contar_primo = 1
+   n = 1
+   while contar_primo <= cuantos:
+      if es_primo(n):
+         print(f"{contar_primo} -> {n} es primo")
+         contar_primo = contar_primo + 1
+
+      n = n + 1
+
+
+
+
+los_primeros_numeros_primos(500)
+
+*************************
+A .-desarrolle una funcion que reciba 2 numeros como argumento,que tome esos numeros y retorne un verdadero si esos
+numeros son amigos (lo que la suma de los divisores numero a es igual al numero b)
+B.-desarrolle una funcion que retorne el factorial de un numero.
+
