@@ -83,12 +83,41 @@ def los_primeros_numeros_primos(cuantos):
       n = n + 1
 
 
-
-
 los_primeros_numeros_primos(500)
+*************************************************
+#los primeros 5 sean perfectos  
+
+def es_perfecto(num):
+    suma = 0
+
+    for i in range(1, num , 1):
+        if num % i == 0:
+            suma = suma + i
+
+    if suma == num:
+        return True
+    else:
+        return False
+
+def primeros_perfectos(n: int):
+   mis_perfectos = []
+   numero = 1
+   cont = 1
+   while cont <= 5:
+      print(numero)
+      if es_perfecto(numero):
+         mis_perfectos.append(numero)
+         cont = cont + 1
+
+      numero = numero + 1
+
+   return mis_perfectos
+
 
 *************************
 A .-desarrolle una funcion que reciba 2 numeros como argumento,que tome esos numeros y retorne un verdadero si esos
 numeros son amigos (lo que la suma de los divisores numero a es igual al numero b)
 B.-desarrolle una funcion que retorne el factorial de un numero.
+
+
 
